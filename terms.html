@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rustic Rooftop - Our Teams</title>
+<!-- Google Material Icons CDN -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+  /* CSS Reset & base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefbf7;
+    color: #4a422a; /* deep brown */
+    line-height: 1.65;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: #382f1b;
+    color: #f7f3e9;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgb(56 47 27 / 0.7);
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 2px;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    color: #d9bc8e;
+    text-shadow: 1px 1px 2px #2e210d;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #f7f3e9;
+    font-size: 16px;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: #e5c07b;
+  }
+
+  main h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    color: #3c2f14;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    text-align: center;
+    border-bottom: 4px solid #97865f;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8px;
+  }
+
+  h2.section-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    border-bottom: 3px solid #97865f;
+    padding-bottom: 8px;
+    color: #4d582c;
+    max-width: 400px;
+  }
+
+  h3.sub-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 28px;
+    margin-bottom: 18px;
+    color: #55662b;
+  }
+
+  p, li {
+    font-size: 1.15rem;
+    color: #5e5b36;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  ul {
+    margin-left: 40px;
+    margin-bottom: 24px;
+    color: #5e5b36;
+  }
+
+  ul li {
+    margin-bottom: 12px;
+  }
+
+  /* Team member card */
+  .team-section {
+    margin-bottom: 64px;
+    background: #f8f8f1;
+    padding: 32px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgb(124 131 73 / 0.15);
+  }
+
+  .team-section h2 {
+    margin-bottom: 36px;
+  }
+
+  .member-profile {
+    margin-bottom: 36px;
+  }
+
+  .member-name {
+    font-weight: 800;
+    font-size: 1.45rem;
+    color: #57682a;
+    margin-bottom: 8px;
+  }
+
+  .member-role {
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #7a7d3d;
+  }
+
+  .member-bio {
+    margin-bottom: 0;
+  }
+
+  /* Footer */
+
+  footer {
+    background: #382f1b;
+    color: #ded7b8;
+    text-align: center;
+    padding: 40px 24px 60px 24px;
+  }
+  footer .address,
+  footer .phone {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  footer .customer-satisfaction {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #bdd17e;
+    margin-top: 20px;
+  }
+
+  /* Responsive */
+
+  @media (min-width: 768px) {
+    p, li {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main h1 {
+      font-size: 3.6rem;
+    }
+    h2.section-title {
+      font-size: 2.7rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" aria-label="Rustic Rooftop Tree Care and Ground Health Services">Rustic Rooftop</div>
+    <nav role="navigation" aria-label="Primary navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" role="main">
+  <h1>Meet the Rustic Rooftop Teams</h1>
+  
+  <section class="team-section" aria-labelledby="arborists-title" tabindex="0">
+    <h2 id="arborists-title" class="section-title">Certified Arborists</h2>
+    <p>Our Certified Arborists are the backbone of Rustic Rooftop’s commitment to tree health and safety. With decades of combined experience, each arborist possesses deep expertise in tree biology, disease management, structural pruning, and emergency care. Accredited by recognized institutions such as the International Society of Arboriculture, our tree surgeons and experts employ advanced techniques and a passion for preserving natural beauty.</p>
+    <div class="member-profile">
+      <div class="member-name">Emma Watson</div>
+      <div class="member-role">Lead Arborist</div>
+      <p class="member-bio">Emma holds a Master's Degree in Urban Forestry and has managed hundreds of large-scale pruning and disease treatment projects. She is especially skilled in deep pruning to promote optimal canopy architecture and longevity.</p>
+    </div>
+    <div class="member-profile">
+      <div class="member-name">Carlos Ramirez</div>
+      <div class="member-role">Tree Health Specialist</div>
+      <p class="member-bio">Carlos specializes in tree pathology and pest management. His expertise ensures early detection and treatment of tree diseases, helping to keep urban and rural trees healthy and thriving.</p>
+    </div>
+    <p>The arborist team's continuous research and commitment to sustainable practices keep Rustic Rooftop at the forefront of tree care innovation and environmental stewardship.</p>
+    <p>Our arborists routinely partake in ongoing education and certification renewals to stay aware of the latest industry developments, including emerging pest threats, treatment protocols, and pruning innovations. They work closely with soil health teams to provide holistic tree care that nurtures both tree crowns and subterranean root systems.</p>
+    <p>Through comprehensive risk assessment and safety planning, the arborists ensure that all tree care activities maintain safety for both the environment and people. Utilizing state-of-the-art equipment and techniques like aerial pruning, cabling, and bracing, they protect and extend the life of every tree treated.</p>
+  </section>
+
+  <section class="team-section" aria-labelledby="soil-science-title" tabindex="0">
+    <h2 id="soil-science-title" class="section-title">Soil Science & Ground Health Experts</h2>
+    <p>Healthy soil is the foundation of robust ground ecosystems. Our Soil Science team includes experienced soil scientists, agronomists, and ecologists dedicated to understanding and enhancing the soil environment for maximum plant health and sustainability.</p>
+    <div class="member-profile">
+      <div class="member-name">Dr. Priya Singh</div>
+      <div class="member-role">Chief Soil Scientist</div>
+      <p class="member-bio">Dr. Singh leads soil fertility analysis and nutrient management programs. Her research focuses on organic soil amendments and bio-stimulants that naturally enhance root growth and water retention.</p>
+    </div>
+    <div class="member-profile">
+      <div class="member-name">Liam Thompson</div>
+      <div class="member-role">Soil Ecologist</div>
+      <p class="member-bio">Liam’s expertise lies in the microbial and chemical analysis of soils. He works closely with arborists to develop soil conditioning plans that promote symbiotic root-microbe relationships for long-term health.</p>
+    </div>
+    <p>The team employs the latest analytical equipment and field sampling techniques, ensuring every plot of land receives the precise care it deserves for thriving flora.</p>
+    <p>They utilize advanced lab and field technologies for comprehensive soil testing. This includes pH analysis, organic matter content monitoring, nutrient profiling, and moisture retention capabilities. These data guide the formulation of customized soil amendments that recondition compacted or degraded soils to support tree longevity and vibrant landscapes.</p>
+    <p>In collaboration with the arborist team, the soil scientists develop integrated soil-treetreatment plans that target root zone health holistically, fostering resilient root networks better able to source water and nutrients while resisting pathogens and environmental stresses.</p>
+  </section>
+
+  <section class="team-section" aria-labelledby="support-staff-title" tabindex="0">
+    <h2 id="support-staff-title" class="section-title">Operations & Support Staff</h2>
+    <p>Behind every successful project is a resilient support team. Our operations and support staff coordinate scheduling, equipment maintenance, client communications, and logistics to ensure seamless service delivery.</p>
+    <div class="member-profile">
+      <div class="member-name">Marissa Lee</div>
+      <div class="member-role">Operations Manager</div>
+      <p class="member-bio">Marissa oversees team deployment and client scheduling. Her organizational skills and attention to detail guarantee timely and efficient service execution.</p>
+    </div>
+    <div class="member-profile">
+      <div class="member-name">Jason Kelley</div>
+      <div class="member-role">Equipment Coordinator</div>
+      <p class="member-bio">Jason manages all equipment procurement, maintenance, and safety compliance. He ensures the teams have the best and safest tools for the job.</p>
+    </div>
+    <div class="member-profile">
+      <div class="member-name">Sophia Martinez</div>
+      <div class="member-role">Client Relations Specialist</div>
+      <p class="member-bio">Sophia handles client communications, feedback, and post-service follow-ups. She is dedicated to maintaining client satisfaction and facilitating clear interactions.</p>
+    </div>
+    <p>Our support staff fosters an environment of professionalism and care that complements the technical expertise of our field teams.</p>
+    <p>Operations staff coordinate efficiently with clients to align project timelines with weather, resource availability, and seasonal considerations, minimizing disruptions and optimizing results. They organize logistics for large machinery and ensure transportation safety protocols are rigorously observed.</p>
+    <p>Client Relations team serves as a dedicated point of contact, ready to address any concerns, explain service plans in detail, and collect valuable feedback to drive continuous improvement.</p>
+  </section>
+
+  <section class="team-section" aria-labelledby="company-culture-title" tabindex="0">
+    <h2 id="company-culture-title" class="section-title">Company Culture and Values</h2>
+    <p>Rustic Rooftop’s success is rooted in a shared passion for nature and commitment to excellence. Our teams embrace values including:</p>
+    <ul>
+      <li><strong>Integrity:</strong> Transparent, honest, and ethical practices in all interactions.</li>
+      <li><strong>Continuous Learning:</strong> Team members regularly update skills through training and certification.</li>
+      <li><strong>Respect:</strong> Honoring the environment, clients, and each other.</li>
+      <li><strong>Innovation:</strong> Leveraging new technologies and methods for sustainable care.</li>
+      <li><strong>Safety:</strong> Prioritizing the well-being of the team and clients.</li>
+      <li><strong>Community Focus:</strong> Engagement in local environmental initiatives and education programs.</li>
+    </ul>
+    <p>Our team-oriented approach creates a supportive atmosphere where every member is empowered to contribute ideas and take pride in the work they do.</p>
+    <p>The culture thrives on collaboration between disciplines to deliver integrated solutions that respect ecological balance and maximize tree and soil health benefits for clients and the environment.</p>
+    <p>Rustic Rooftop encourages open communication, innovation, and environmental stewardship among its teams, fostering a workplace where employees grow personally and professionally alongside sustainable landscapes.</p>
+  </section>
+
+  <section class="team-section" aria-labelledby="certifications-title" tabindex="0">
+    <h2 id="certifications-title" class="section-title">Certifications & Professional Affiliations</h2>
+    <p>Rustic Rooftop’s teams hold numerous certifications ensuring expert, reliable service, including:</p>
+    <ul>
+      <li>ISA Certified Arborist</li>
+      <li>Certified Tree Worker</li>
+      <li>Certified Soil Scientist (CSS)</li>
+      <li>OSHA Safety Certification</li>
+      <li>First Aid & CPR Certified</li>
+      <li>Eco-friendly & Organic Landscaping Specialist</li>
+      <li>Municipal and State Licensing for Tree Care Operations</li>
+    </ul>
+    <p>Our affiliation with local and international organizations reflects our dedication to maintaining high industry standards and staying abreast of latest research and techniques.</p>
+    <p>We prioritize continual education through workshops, seminars, and participation in industry conferences. Certifications are renewed regularly ensuring teams adopt best practices and innovations in arboriculture and soil science.</p>
+  </section>
+
+  <section class="team-section" aria-labelledby="join-us-title" tabindex="0">
+    <h2 id="join-us-title" class="section-title">Join the Rustic Rooftop Team</h2>
+    <p>We are always looking for talented individuals who share our passion for nature and sustainable tree care. If you’re interested in joining our expert teams, consider the various roles available in arboriculture, soil science, equipment operation, and client services. We provide ongoing professional development, a supportive work atmosphere, and rewarding projects.</p>
+    <p>To apply, please submit your resume and cover letter via our contact page or email us at <a href="mailto:careers@rusticrooftop.com">careers@rusticrooftop.com</a>. Let’s grow stronger together!</p>
+    <p>Working at Rustic Rooftop means being part of a family where effort, dedication, and ideas are valued. We foster a culture of mentoring for new professionals while continuously encouraging innovation and sustainability at every project.</p>
+    <p>Our extensive network includes seasonal internships, apprenticeship programs, and collaborations with ecological research institutions, providing diverse career paths for passionate nature professionals.</p>
+    <p>We are committed to diversity, equity, and inclusion; we welcome applicants of all backgrounds and encourage teamwork that celebrates different perspectives and talents.</p>
+    <p>As part of our team, you will gain exposure to cutting-edge ecological practices and participate in projects that have meaningful environmental impact at urban and regional scales.</p>
+    <p>Benefits include health insurance, flexible scheduling, professional development stipends, and a supportive work environment focused on safety and wellbeing.</p>
+    <p>If you love nature and want to play a key role in sustaining tree and ground health for generations to come, Rustic Rooftop is the place to build your career.</p>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address class="address" aria-label="Company Address">
+      60 Washington Square S, New York, NY 10012, USA
+    </address>
+    <div class="phone" aria-label="Company phone number">
+      Phone: (212) 555-1234
+    </div>
+    <div class="customer-satisfaction" aria-label="Customer satisfaction message">
+      Increasing Customer Satisfaction Through Quality, Care, and Commitment to Your Trees and Soil Health
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
