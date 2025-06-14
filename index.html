@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rustic Rooftop - Tree Care & Ground Health Services</title>
+<!-- Google Material Icons CDN -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+  /* CSS Reset & base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefbf7;
+    color: #4a422a; /* deep brown */
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Container max width and horizontal centering */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  /* Header styles */
+  header {
+    position: sticky;
+    top: 0;
+    background: #382f1b;
+    color: #f7f3e9;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgb(56 47 27 / 0.7);
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 2px;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    color: #d9bc8e;
+    text-shadow: 1px 1px 2px #2e210d;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #f7f3e9;
+    font-size: 16px;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: #e5c07b;
+  }
+
+  /* Main hero */
+  .hero {
+    margin-top: 48px;
+    background-image: url("https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/66d5d000-6d50-4b58-9a97-0b89b9b5f624.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+    color: #faf4e1;
+    padding: 96px 24px 96px 24px;
+    text-align: center;
+    box-shadow: inset 0 0 150px rgb(19 15 4 / 0.7);
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    text-shadow: 2px 2px 6px #1c160a;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 16px auto 32px auto;
+    color: #f0e9d2;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px #1c160a;
+  }
+  .hero .btn {
+    background: linear-gradient(135deg, #6a7f41, #a7a83f);
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgb(111 134 52 / 0.6);
+    transition: background 0.4s ease;
+  }
+  .hero .btn:hover,
+  .hero .btn:focus {
+    background: linear-gradient(135deg, #8aad4a, #cecd4b);
+  }
+
+  /* Section heading */
+  h2.section-title {
+    font-weight: 800;
+    font-size: 2.6rem;
+    color: #3c2f14;
+    margin-bottom: 24px;
+    border-bottom: 3px solid #97865f;
+    padding-bottom: 8px;
+    max-width: 360px;
+  }
+  /* Section subtitle */
+  h3.sub-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #4c5630;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  /* Grid for images and features */
+  .grid-3 {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-bottom: 48px;
+  }
+
+  .feature-card {
+    background: #fafaf4;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgb(112 112 85 / 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+  }
+  .feature-card:hover,
+  .feature-card:focus-within {
+    box-shadow: 0 10px 28px rgb(112 112 85 / 0.25);
+  }
+  .feature-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  .feature-card h3 {
+    color: #55622a;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  .feature-card p {
+    color: #777c4f;
+    font-weight: 500;
+  }
+  .feature-card p + p {
+    margin-top: 12px;
+  }
+
+  /* Extended content area for text blocks */
+  .content-section {
+    background: #fcfbf7;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 15px rgb(121 110 70 / 0.15);
+    margin-bottom: 64px;
+    color: #4b482d;
+  }
+  .content-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .content-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* About us block */
+  .about-us {
+    background: #f2f1e9;
+    border-left: 8px solid #8a9a3a;
+    padding: 24px 32px;
+    margin-bottom: 48px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(138 154 58 / 0.15);
+  }
+  .about-us h2 {
+    font-weight: 800;
+    font-size: 2.25rem;
+    color: #4b522e;
+    margin-bottom: 16px;
+  }
+  .about-us p {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: #555b2b;
+    margin-bottom: 1rem;
+  }
+
+  /* Why choose us section */
+  .why-choose-us {
+    background: #f8f8f1;
+    border-radius: 16px;
+    padding: 32px 40px;
+    margin-bottom: 64px;
+    box-shadow: 0 4px 20px rgb(124 131 73 / 0.15);
+    color: #4c5630;
+  }
+  .why-choose-us h2 {
+    font-weight: 800;
+    font-size: 2.3rem;
+    margin-bottom: 24px;
+    color: #5d6e2e;
+  }
+  .why-choose-us ul {
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+  .why-choose-us li {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+  }
+
+  /* Detailed service section */
+  .service-detail {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #6a6e44;
+  }
+  .service-detail p {
+    margin-bottom: 10px;
+  }
+
+  /* FAQ section */
+  .faq-section {
+    background: #f5f5e9;
+    border-radius: 16px;
+    padding: 32px 40px;
+    margin-bottom: 64px;
+    box-shadow: 0 4px 16px rgb(136 142 73 / 0.15);
+    color: #4c5230;
+  }
+  .faq-section h2 {
+    font-weight: 800;
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    color: #5b662f;
+  }
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  .faq-item summary {
+    font-weight: 700;
+    font-size: 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    padding: 12px 16px;
+    background: #dbdfb6;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  .faq-item summary:hover,
+  .faq-item summary:focus {
+    background: #c2cd77;
+    outline: none;
+  }
+  .faq-item p {
+    padding: 12px 20px;
+    margin: 0;
+    background: #e8edc4;
+    border-radius: 0 0 10px 10px;
+    color: #545c2a;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  /* Feedback form and feedback list */
+  .feedback {
+    margin-bottom: 64px;
+  }
+  .feedback h2 {
+    margin-bottom: 20px;
+  }
+  form.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+  }
+  form.feedback-form label {
+    font-weight: 600;
+    color: #4a4627;
+  }
+  form.feedback-form input,
+  form.feedback-form textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #b6bc89;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  form.feedback-form input:focus,
+  form.feedback-form textarea:focus {
+    border-color: #8a9a3a;
+    outline: none;
+  }
+  form.feedback-form button {
+    background: #8a9a3a;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.4s ease;
+  }
+  form.feedback-form button:hover,
+  form.feedback-form button:focus {
+    background: #a3b23c;
+  }
+  .feedback-list {
+    margin-top: 32px;
+    max-width: 700px;
+  }
+  .feedback-item {
+    background: #f7f7e7;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 10px rgb(168 180 97 / 0.25);
+    font-style: italic;
+    color: #4a4627;
+  }
+  .feedback-item strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    color: #6b6e28;
+  }
+
+  /* Tips Section */
+  .tips-section {
+    margin-bottom: 64px;
+  }
+  .tips-section h2 {
+    margin-bottom: 24px;
+  }
+  .tips-list {
+    list-style: disc inside;
+    max-width: 900px;
+    color: #5e603d;
+  }
+  .tips-list li {
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+  }
+  .tips-explanation {
+    max-width: 900px;
+    margin-bottom: 40px;
+    color: #595f39;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Disclaimer Section */
+  .disclaimer {
+    font-size: 0.9rem;
+    color: #555130;
+    background-color: #f3f2e2;
+    border-left: 6px solid #a1a14c;
+    padding: 16px 24px;
+    margin-bottom: 64px;
+    max-width: 900px;
+    border-radius: 8px;
+  }
+
+  /* Footer */
+  footer {
+    background: #382f1b;
+    color: #ded7b8;
+    text-align: center;
+    padding: 40px 24px 60px 24px;
+  }
+  footer .address {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+  footer .customer-satisfaction {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #bdd17e;
+  }
+
+  /* Blog Section */
+  .blog-section {
+    margin-bottom: 64px;
+  }
+  .blog-section h2 {
+    margin-bottom: 32px;
+  }
+  .blog-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .blog-post {
+    background: #fafaf4;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgb(112 112 85 / 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .blog-post:hover,
+  .blog-post:focus-within {
+    box-shadow: 0 10px 28px rgb(112 112 85 / 0.25);
+  }
+  .blog-post img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+  .blog-content {
+    padding: 20px 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-content h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #5a6b29;
+  }
+  .blog-content p {
+    font-weight: 500;
+    color: #777c4f;
+    flex-grow: 1;
+    line-height: 1.4;
+  }
+  .blog-content a.read-more {
+    margin-top: 16px;
+    font-weight: 700;
+    color: #8a9a3a;
+    font-size: 0.95rem;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: color 0.3s ease;
+  }
+  .blog-content a.read-more:hover,
+  .blog-content a.read-more:focus {
+    color: #a3b23c;
+    text-decoration: underline;
+  }
+
+  /* Responsive Layout */
+
+  /* Tablet and above */
+  @media (min-width: 768px) {
+    .hero {
+      padding: 120px 40px 120px 40px;
+      text-align: center;
+    }
+  }
+
+  /* Desktop and above - three column grid for features */
+  @media (min-width: 1024px) {
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .content-section {
+      font-size: 1.15rem;
+      padding: 48px;
+    }
+  }
+
+  /* Large desktop */
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" aria-label="Rustic Rooftop Tree Care and Ground Health Services">Rustic Rooftop</div>
+    <nav role="navigation" aria-label="Primary navigation">
+     <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" role="region" aria-labelledby="hero-title">
+    <h1 id="hero-title">Expert Tree Care & Root Nourishment Services</h1>
+    <p>Rugged, natural solutions for deep root growth and healthy ground. Serving your trees with passion and precision.</p>
+    <button class="btn" aria-label="Explore our services">Explore Our Services</button>
+  </section>
+
+  <section id="about-us" class="about-us" role="region" tabindex="0" aria-labelledby="about-title">
+    <h2 id="about-title">About Rustic Rooftop</h2>
+    <p>At Rustic Rooftop, we specialize in premium tree care and ground health services designed for long-lasting vitality. Our rugged, natural approach ensures your trees develop deep, nourishing root systems. From expert pruning to ground renewal, our team combines traditional wisdom with innovative techniques to maintain robust urban and rural landscapes.</p>
+    <p>Founded by arboriculture experts passionate about sustainable ecosystems, Rustic Rooftop has grown to become a trusted partner for homeowners, city planners, and landscaping professionals. Our mission is to promote strong, healthy trees that support biodiversity and improve environmental quality.</p>
+    <p>Our deep pruning techniques remove unhealthy or overgrown branches, allowing sunlight and air to reach interior foliage, while our root nourishment services restore soil vitality essential for durable growth. We also offer comprehensive soil health assessments and transformation plans that nurture the entire root zone, ensuring your trees thrive under all conditions.</p>
+    <p>Through a personalized service experience, we educate clients on best tree care practices tailored to their environment. This long-term partnership approach leads to healthier trees, increased property value, and satisfied clients who trust Rustic Rooftop as their go-to ground health experts.</p>
+  </section>
+
+  <section id="why-choose-us" class="why-choose-us" role="region" aria-labelledby="choose-title" tabindex="0">
+    <h2 id="choose-title">Why Choose Rustic Rooftop?</h2>
+    <ul>
+      <li><strong>Expertise & Experience:</strong> Our certified arborists and soil scientists bring over 25 years combined expertise delivering effective tree health solutions.</li>
+      <li><strong>Customized Care Plans:</strong> Every tree and soil composition is unique; we tailor treatments and care plans to the specific requirements of your landscape.</li>
+      <li><strong>Eco-Friendly Practices:</strong> We prioritize sustainable, chemical-minimized approaches to preserve local ecosystems and biodiversity.</li>
+      <li><strong>Cutting-Edge Technology:</strong> Using advanced diagnostic tools, soil analyzers, and drone assessments for precise targeting and monitoring.</li>
+      <li><strong>Customer Commitment:</strong> Transparent communication, timely services, and ongoing support for your landscape’s well-being.</li>
+      <li><strong>Comprehensive Service:</strong> From soil to crown, we handle all aspects of tree and ground health including emergency tree care.</li>
+      <li><strong>Safety Standards:</strong> Strict adherence to safety protocols protecting your property, visitors, and our teams.</li>
+    </ul>
+  </section>
+
+  <section id="services" role="region" aria-labelledby="services-title" class="container">
+    <h2 class="section-title" id="services-title">Our Services</h2>
+    <div class="grid-3" role="list">
+      <article class="feature-card" role="listitem" tabindex="0" aria-label="Tree Pruning Service">
+        <img src="s1.png" alt="Close-up image of robust oak tree branches after deep pruning with natural sunlight" />
+        <h3>Deep Pruning</h3>
+        <div class="service-detail">
+          <p>Careful and deep pruning to enhance tree structure, increase air circulation, and stimulate strong root growth.</p>
+          <p>Our arborists use precise pruning methods to remove dead or overgrown limbs, shaping the tree for optimal sunlight and healthy foliage density. This prevents disease spread and strengthens resilience against storms and heavy winds.</p>
+        </div>
+      </article>
+      <article class="feature-card" role="listitem" tabindex="0" aria-label="Root Nourishment Service">
+        <img src="s2.png" alt="Illustration showing cross-section of soil layers and healthy tree roots deeply nourished" />
+        <h3>Root Nourishment</h3>
+        <div class="service-detail">
+          <p>Applying essential nutrients and soil conditioning to promote robust root health and strong soil-root interaction.</p>
+          <p>We analyze soil composition and apply organic amendments and bio-stimulants designed to invigorate root systems. Healthy roots mean better nutrient uptake and increased drought tolerance.</p>
+        </div>
+      </article>
+      <article class="feature-card" role="listitem" tabindex="0" aria-label="Tree Surgery Services">
+        <img src="s3.png" alt="Professional tree surgeon inspecting major tree branches for health and treatment in natural forest" />
+        <h3>Tree Surgery</h3>
+        <div class="service-detail">
+          <p>Professional interventions to treat diseases, remove damaged branches, and ensure longevity of your trees.</p>
+          <p>When trees show signs of infection or damage, our tree surgery specialists diagnose issues and perform treatments including cabling, bracing, and disease control to restore tree health.</p>
+        </div>
+      </article>
+      <article class="feature-card" role="listitem" tabindex="0" aria-label="Soil Health Management">
+        <img src="s4.png" alt="Natural soil management tools and materials laid out with rugged textures on wooden surface" />
+        <h3>Soil Health Management</h3>
+        <div class="service-detail">
+          <p>Comprehensive soil testing and improvement plans to create optimal growing conditions for your green spaces.</p>
+          <p>Our experts sample and test soil pH, organic matter, and nutrition. Customized soil conditioning boosts fertility and water retention, reducing plant stress and supporting sustainable growth.</p>
+        </div>
+      </article>
+      <article class="feature-card" role="listitem" tabindex="0" aria-label="Landscape Renovation">
+        <img src="s5.png" alt="Vibrant urban landscape renewal with healthy trees and natural ground cover in daylight" />
+        <h3>Landscape Renovation</h3>
+        <div class="service-detail">
+          <p>Revitalizing your outdoor spaces with sustainable planting, pruning, and ground restoration techniques.</p>
+          <p>We assist in transforming tired or damaged landscapes by planting native species and implementing natural ground cover to improve ecosystem function and appearance.</p>
+        </div>
+      </article>
+      <article class="feature-card" role="listitem" tabindex="0" aria-label="Consultation and Planning">
+        <img src="s6.png" alt="Team consultation reviewing ground and tree care plans with natural soil background" />
+        <h3>Consultation & Planning</h3>
+        <div class="service-detail">
+          <p>Expert advice and customized care plans tailored to the needs of your specific trees and ground conditions.</p>
+          <p>Our team evaluates your tree and soil health and collaborates with you to develop strategic long-term care and maintenance plans ensuring sustainability and safety.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="faq" class="faq-section container" role="region" aria-labelledby="faq-title" tabindex="0">
+    <h2 id="faq-title" class="section-title">Frequently Asked Questions (FAQ)</h2>
+    <details class="faq-item">
+      <summary>What is deep pruning and why is it important?</summary>
+      <p>Deep pruning involves selectively removing larger branches or structural parts of the tree to improve health, light penetration, and growth patterns. It prevents disease and helps trees develop stronger structures.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How often should soil be tested for tree health?</summary>
+      <p>We recommend soil testing at least every 2-3 years or if you notice changes in tree vigor or growth. Regular testing helps adjust care practices to maintain optimal soil conditions.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can you help with emergency tree care?</summary>
+      <p>Yes, Rustic Rooftop provides emergency response for fallen or damaged trees to ensure safety and minimize further damage. Contact us immediately for urgent assistance.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Are your soil amendments organic and safe for pets?</summary>
+      <p>We use primarily organic and eco-friendly soil enhancers safe for pets, children, and wildlife. Full ingredient information is available upon request.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do you offer maintenance contracts?</summary>
+      <p>Yes, we offer customizable maintenance plans for ongoing tree and ground health monitoring, seasonal pruning, fertilization, and soil care.</p>
+    </details>
+  </section>
+
+  <section id="tips" class="tips-section container" role="region" aria-labelledby="tips-title" tabindex="0">
+    <h2 id="tips-title" class="section-title">Tree Care Tips & Best Practices</h2>
+    <div class="tips-explanation">
+      Maintaining healthy trees requires understanding their biology and environment. Our expert tips ensure your trees get proper hydration, nutrition, and protection throughout the seasons.
+    </div>
+    <ul class="tips-list">
+      <li><strong>Watering Mature Trees:</strong> Water deeply and less frequently. Deep watering encourages roots to grow downwards, increasing drought resistance. Light, frequent watering leads to shallow roots vulnerable to stress.</li>
+      <li><strong>Seasonal Pruning:</strong> Prune during the late winter or early spring dormant periods to reduce stress and allow fresh growth to come in strong during growing season.</li>
+      <li><strong>Organic Mulching:</strong> Apply organic mulch 3-4 inches thick around the base but avoid piling against the trunk. Mulch retains moisture, controls weeds, and slowly releases nutrients.</li>
+      <li><strong>Pest and Disease Monitoring:</strong> Regularly inspect leaves and bark for symptoms. Early detection and treatment prevent severe infestations.</li>
+      <li><strong>Prevent Soil Compaction:</strong> Keep foot and vehicle traffic away from root zones as compacted soil inhibits root respiration and nutrient uptake.</li>
+      <li><strong>Professional Support:</strong> For major interventions such as deep root fertilization or corrective pruning, trust certified arborists</li>
+      <li><strong>Balanced Fertilization:</strong> Avoid overuse of fertilizer that can lead to weak growth and pollution. Test soil first to customize nutrient input.</li>
+      <li><strong>Protection for Young Trees:</strong> Stake young trees loosely with breathable guards to shield from wind or animal damage without obstructing growth.</li>
+    </ul>
+  </section>
+
+  <section id="blog" class="blog-section container" role="region" aria-labelledby="blog-title" tabindex="0">
+    <h2 id="blog-title" class="section-title">Our Blog - Knowledge and Insights</h2>
+    <div class="blog-grid" role="list">
+      <article class="blog-post" role="listitem" tabindex="0" aria-label="Blog post about the importance of root health">
+        <img src="b1.png" alt="Healthy tree roots growing deeply in nutrient-rich soil cross-section" />
+        <div class="blog-content">
+          <h3>Understanding Root Health: The Foundation of Strong Trees</h3>
+          <p>Healthy roots anchor a tree, extract nutrients, and store energy. Learn how to identify root issues and enhance root vitality with proper soil management and nourishment.</p>
+          <a href="#" class="read-more" aria-label="Read more about root health">Read more</a>
+        </div>
+      </article>
+      <article class="blog-post" role="listitem" tabindex="0" aria-label="Blog post about pruning techniques">
+        <img src="b2.png" alt="Expert pruning cutting thick branches from a large tree carefully" />
+        <div class="blog-content">
+          <h3>Deep Pruning Techniques For Lasting Tree Health</h3>
+          <p>Pruning is more than cutting branches; it shapes growth and health. Discover different pruning types, tools, and timing for optimal results.</p>
+          <a href="#" class="read-more" aria-label="Read more about pruning techniques">Read more</a>
+        </div>
+      </article>
+      <article class="blog-post" role="listitem" tabindex="0" aria-label="Blog post about soil conditioning">
+        <img src="b3.png" alt="Close-up image of rich earthy soil full of organic material and nutrients" />
+        <div class="blog-content">
+          <h3>The Power of Soil Conditioning for Ground Health</h3>
+          <p>Soil conditioning rejuvenates tired earth by improving texture, aeration, and nutrient content, creating a supportive environment for all plants.</p>
+          <a href="#" class="read-more" aria-label="Read more about soil conditioning">Read more</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="feedback" class="feedback container" role="region" aria-labelledby="feedback-title">
+    <h2 id="feedback-title" class="section-title">Customer Feedback</h2>
+    <form class="feedback-form" aria-label="Submit your feedback form" id="feedbackForm">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required maxlength="50" aria-required="true" aria-describedby="name-desc" />
+      <small id="name-desc">Enter your full name.</small>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required aria-required="true" aria-describedby="email-desc" />
+      <small id="email-desc">Enter your email address.</small>
+
+      <label for="message">Feedback</label>
+      <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-desc"></textarea>
+      <small id="message-desc">Share your experience with our services.</small>
+
+      <button type="submit" aria-label="Submit feedback">Submit Feedback</button>
+    </form>
+    <div class="feedback-list" aria-live="polite" aria-relevant="additions" id="feedbackList" tabindex="0">
+      <!-- Submitted feedback will appear here -->
+    </div>
+  </section>
+
+  <section id="disclaimer" class="disclaimer container" role="region" aria-labelledby="disclaimer-title" tabindex="0">
+    <h2 id="disclaimer-title" class="section-title">Disclaimer</h2>
+    <p>Rustic Rooftop provides tree care and ground health services based on extensive expertise and best practices. However, results may vary depending on environmental conditions and tree/soil health. We recommend regular professional assessments to ensure optimal outcomes. Rustic Rooftop is not liable for damages resulting from unforeseen natural events or improper maintenance outside our service scope.</p>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address class="address" aria-label="Company Address">
+      60 Washington Square S, New York, NY 10012, USA
+    </address>
+    <div class="customer-satisfaction" aria-label="Customer satisfaction message">
+      Increasing Customer Satisfaction Through Quality, Care, and Commitment to Your Trees and Soil Health
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Feedback form script for demo (client-side only)
+
+  const form = document.getElementById('feedbackForm');
+  const feedbackList = document.getElementById('feedbackList');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Basic validation
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Create feedback item
+    const feedbackItem = document.createElement('div');
+    feedbackItem.className = 'feedback-item';
+    feedbackItem.tabIndex = 0;
+    feedbackItem.innerHTML = \`<strong>\${escapeHtml(name)}</strong>\${escapeHtml(message)}\`;
+
+    // Append to feedback list
+    feedbackList.prepend(feedbackItem);
+
+    // Reset form
+    form.reset();
+    form.name.focus();
+  });
+
+  // Escape HTML for safety
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+</script>
+</body>
+</html>
+
+
