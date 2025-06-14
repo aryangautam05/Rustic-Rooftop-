@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rustic Rooftop - Cookie Policy</title>
+<!-- Google Material Icons CDN -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+  /* CSS Reset & base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefbf7;
+    color: #4a422a;
+    line-height: 1.65;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 120px; /* bottom space for cookie dialog */
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: #382f1b;
+    color: #f7f3e9;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1100;
+    box-shadow: 0 2px 10px rgb(56 47 27 / 0.7);
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 2px;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    color: #d9bc8e;
+    text-shadow: 1px 1px 2px #2e210d;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #f7f3e9;
+    font-size: 16px;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: #e5c07b;
+  }
+
+  main h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    color: #3c2f14;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    text-align: center;
+    border-bottom: 4px solid #97865f;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8px;
+  }
+
+  h2.section-title {
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-top: 48px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #97865f;
+    padding-bottom: 8px;
+    color: #4d582c;
+    max-width: 600px;
+  }
+
+  p {
+    font-size: 1.15rem;
+    color: #5e5b36;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .cookie-point {
+    margin-bottom: 40px;
+  }
+
+  .cookie-point h3 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #55662b;
+  }
+
+  /* Footer */
+
+  footer {
+    background: #382f1b;
+    color: #ded7b8;
+    text-align: center;
+    padding: 40px 24px 60px 24px;
+  }
+  footer .address,
+  footer .phone {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  footer .customer-satisfaction {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #bdd17e;
+    margin-top: 20px;
+  }
+
+  /* Cookie consent dialog */
+
+  #cookie-consent-dialog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(56, 47, 27, 0.95);
+    color: #f7f3e9;
+    padding: 20px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 1200;
+    box-shadow: 0 -4px 15px rgb(56 47 27 / 0.8);
+    gap: 20px;
+  }
+
+  #cookie-consent-dialog p {
+    flex: 1 1 100%;
+    max-width: 800px;
+    margin: 0;
+  }
+
+  #cookie-consent-dialog button {
+    background-color: #8a9a3a;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px;
+  }
+
+  #cookie-consent-dialog button:hover,
+  #cookie-consent-dialog button:focus {
+    background-color: #a3b23c;
+  }
+
+  #cookie-decline-btn {
+    background-color: #555339;
+  }
+  #cookie-decline-btn:hover,
+  #cookie-decline-btn:focus {
+    background-color: #7a7a58;
+  }
+
+  /* Responsive */
+
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main h1 {
+      font-size: 3.6rem;
+    }
+    h2.section-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" aria-label="Rustic Rooftop Tree Care and Ground Health Services">Rustic Rooftop</div>
+    <nav role="navigation" aria-label="Primary navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" role="main">
+  <h1>Rustic Rooftop Cookie Policy</h1>
+
+  <!-- Existing points -->
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">What Are Cookies?</h2>
+    <p>Cookies are small text files placed on your device when you visit websites. They store information about your browsing and preferences to enhance your experience and provide website owners insights into usage. These files can store your settings, login status, and tracking data, helping websites remember you and adapt content to your needs. Cookies are essential for many website features but can also be used to collect data for marketing and analytics.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Types of Cookies We Use</h2>
+    <p>At Rustic Rooftop, we use several types of cookies for various purposes. Essential cookies ensure necessary site functions work correctly. Performance cookies collect data to help improve our website’s speed and functionality. Functionality cookies remember your preferences, such as language or region. Advertising cookies and tracking pixels help us serve relevant ads and analyze website traffic. Each type plays a vital role in our commitment to user experience and business operations.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Essential Cookies</h2>
+    <p>Essential cookies are required for basic website functionalities such as page navigation, security, and access to secure areas. These cookies allow you to move around the site smoothly and use features like online forms and login areas. Without them, some parts of our website may not function properly and your visit could be less convenient or restricted.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Performance and Analytical Cookies</h2>
+    <p>Performance and analytical cookies help us understand how visitors use Rustic Rooftop’s site by collecting anonymized information on pages visited, time spent, and user interactions. This data allows us to identify errors, improve navigation, and optimize content. Tools like Google Analytics are used while respecting privacy to gather insights for enhancing our services.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Functionality Cookies</h2>
+    <p>Functionality cookies enable Rustic Rooftop to remember your preferences and settings like language choice, font size, or location. These cookies personalize your experience and make repeat visits easier by remembering your previous selections. They help provide advanced features enabling customization without repeatedly requesting your input.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Advertising and Targeting Cookies</h2>
+    <p>Advertising and targeting cookies collect information about your browsing habits to tailor marketing messages and advertisements to your interests. These cookies may track your visits across multiple websites, creating a user profile used to display more relevant ads and promotions. They help us serve you content aligned with your needs while supporting Rustic Rooftop’s digital marketing efforts.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Third-Party Cookies</h2>
+    <p>Some cookies placed on your device via Rustic Rooftop websites are created by third parties such as analytics or advertising providers. We do not control these cookies but partner only with trusted providers who comply with privacy laws and follow strict data protection standards. Third-party cookies enable functionalities such as social media features and tracking across platforms.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Managing Cookies</h2>
+    <p>You have the right to control cookie settings and may disable or limit cookies through your browser preferences. Most browsers allow you to refuse cookies or delete them after browsing sessions. Disabling certain cookies may affect the website’s performance or restrict some features. It is advisable to review cookie settings periodically and adjust for your comfort while balancing user experience.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Rustic Rooftop’s Commitment to Privacy</h2>
+    <p>We strive to ensure transparency about how cookies and personal data are used. Our privacy practices comply with applicable data protection regulations, including the GDPR. We provide clear options for cookie consent and respect your decisions regarding the use of cookies. Your trust is fundamental as we work to protect your privacy while delivering high-quality web experiences.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Cookie Consent and Choices</h2>
+    <p>Upon visiting Rustic Rooftop, you may be prompted with a cookie consent dialogue allowing you to accept or decline non-essential cookies. Your selection will be stored to respect your preferences on future visits. You may withdraw or modify consent at any time using website controls. Essential cookies remain active as they are necessary for the operation of core functionality.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Cookies and Children’s Privacy</h2>
+    <p>Rustic Rooftop does not knowingly collect data from children under 13. Cookie use is designed with care not to target or collect personal information from children. Parents and guardians are advised to supervise web access and employ parental controls to manage use of cookies and protect children’s privacy online.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Changes to Our Cookie Policy</h2>
+    <p>This cookie policy may be updated occasionally to reflect changes in technology or regulations. We encourage visitors to review this policy regularly. Continued use of our websites after updates constitutes acceptance of the revised policy. We are committed to maintaining clear communication and compliance with evolving laws.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Contact Us Regarding Cookies</h2>
+    <p>If you have any questions about Rustic Rooftop’s cookie practices, please contact our Data Privacy Officer at <a href="mailto:privacy@rusticrooftop.com" style="color:#bdd17e;">privacy@rusticrooftop.com</a>, or call us at (212) 555-1234. We welcome your inquiries and feedback on protecting your digital privacy while enhancing your experience.</p>
+  </div>
+
+  <!-- Additional related topics for more detailed content -->
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">How Cookies Affect Your Online Experience</h2>
+    <p>Cookies enhance your online experience by enabling websites like Rustic Rooftop to remember your preferences and activities, preventing the need to repeatedly enter information and providing tailored content. They facilitate smoother navigation, faster loading times, and access to secure areas without needing to reauthenticate. Additionally, cookies allow us to deliver relevant content and promotional offers that match your interests, offering a more personalized web experience.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Detailed Explanation of First-Party vs Third-Party Cookies</h2>
+    <p>First-party cookies are created and stored by the website you’re visiting—in this case, Rustic Rooftop. These cookies are primarily used to manage site functionality and user preferences. Third-party cookies originate from external partners such as advertising networks, analytics providers, or social media platforms integrated into our site. While first-party cookies focus on improving your direct interaction with our platform, third-party cookies are typically used for broader marketing and measurement purposes beyond our site.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">The Role of Session and Persistent Cookies</h2>
+    <p>Session cookies are temporary and get deleted once you close your browser. They help track your navigation on our site without storing long-term data. Persistent cookies, on the other hand, remain on your device for a set period or until deleted manually. These cookies remember your settings and login status for future visits to make access more convenient. Both types work together to improve your browsing efficiency and personalization on Rustic Rooftop’s website.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Security Measures for Cookie Data</h2>
+    <p>Rustic Rooftop takes the security of cookie data seriously. We use encryption and secure protocols to protect cookie data transmission. Our cookies do not store sensitive personal information such as passwords or full payment details. In addition, we regularly review third-party vendors to ensure compliance with stringent data security standards. Users are encouraged to maintain updated browsers and security software to safeguard their information while browsing.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">How to Manage Cookies Through Browser Settings</h2>
+    <p>You can control or delete cookies through your browser preferences. Most modern browsers allow you to view cookie data stored by websites, delete individual cookies, or even block cookies altogether. Our site functions best when essential cookies are enabled. Disabling or deleting cookies might reduce functionality or affect your experience. For detailed instructions, we recommend consulting your browser’s help resources or privacy settings interface.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Implications of Declining Cookies</h2>
+    <p>If you choose to decline cookies on Rustic Rooftop, certain features may be limited or unavailable. For example, personalized content, saved preferences, or remembered login states may not function as intended. While we respect your choice to decline, we encourage you to accept essential cookies to ensure smooth navigation and a fully functional experience. You can revisit your preferences at any time through the cookie controls provided.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Cookies and Legal Compliance</h2>
+    <p>Our cookie practices comply with prominent regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). As part of these frameworks, we provide you with clear information, opt-in/opt-out options, and rights regarding your data. We supply easy access to related privacy documents and offer mechanisms to update preferences and withdraw consent if desired, in line with global privacy law standards.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">The Use of Cookies for Analytics and Site Improvement</h2>
+    <p>Rustic Rooftop uses cookies to collect anonymous data on visitor numbers, page popularity, and interaction behaviors. This helps our team understand how users engage with the site, enabling improvements to content, design, and technical performance. We analyze patterns and visitor flow to optimize user experience and prioritize features most valued by our audience, all while maintaining strict anonymity and respecting your privacy.</p>
+  </div>
+
+  <div class="cookie-point" tabindex="0">
+    <h2 class="section-title">Cookie Retention Periods and Clearing Policies</h2>
+    <p>The duration cookies remain on your device varies depending on their type and purpose. Session cookies expire once you close your browser, while persistent cookies can last from days to years. We recommend periodically clearing cookies from your devices to protect your privacy. However, note that clearing cookies will reset preferences and login sessions on our site and other websites. Our cookie consent dialog will appear again after clearing cookies.</p>
+  </div>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address class="address" aria-label="Company Address">
+      60 Washington Square S, New York, NY 10012, USA
+    </address>
+    <div class="phone" aria-label="Company phone number">
+      Phone: (212) 555-1234
+    </div>
+    <div class="customer-satisfaction" aria-label="Customer satisfaction message">
+      Increasing Customer Satisfaction Through Quality, Care, and Commitment to Your Trees and Soil Health
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-consent-dialog" role="dialog" aria-live="assertive" aria-label="Cookie consent dialogue" aria-modal="true">
+  <p>We use cookies to enhance your experience, analyze traffic, and serve personalized content. By continuing to use our site, you accept our use of cookies. You can decline or accept below.</p>
+  <button id="cookie-accept-btn">Accept Cookies</button>
+  <button id="cookie-decline-btn">Decline</button>
+</div>
+
+<script>
+  const dialog = document.getElementById('cookie-consent-dialog');
+  const acceptBtn = document.getElementById('cookie-accept-btn');
+  const declineBtn = document.getElementById('cookie-decline-btn');
+
+  const consent = localStorage.getItem('cookieConsent');
+
+  if (consent === 'accepted' || consent === 'declined') {
+    dialog.style.display = 'none';
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    dialog.style.display = 'none';
+  });
+
+  declineBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    dialog.style.display = 'none';
+  });
+</script>
+</body>
+</html>
+
