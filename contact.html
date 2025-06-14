@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rustic Rooftop - Contact Us</title>
+<!-- Google Material Icons CDN -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+  /* CSS Reset & base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefbf7;
+    color: #4a422a; /* deep brown */
+    line-height: 1.65;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: #382f1b;
+    color: #f7f3e9;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgb(56 47 27 / 0.7);
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 2px;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    color: #d9bc8e;
+    text-shadow: 1px 1px 2px #2e210d;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #f7f3e9;
+    font-size: 16px;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: #e5c07b;
+  }
+
+  main h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    color: #3c2f14;
+    margin-top: 48px;
+    margin-bottom: 32px;
+    text-align: center;
+    border-bottom: 4px solid #97865f;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8px;
+  }
+
+  h2.section-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    border-bottom: 3px solid #97865f;
+    padding-bottom: 8px;
+    color: #4d582c;
+    max-width: 400px;
+  }
+
+  p, li {
+    font-size: 1.15rem;
+    color: #5e5b36;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  ul {
+    margin-left: 40px;
+    margin-bottom: 24px;
+    color: #5e5b36;
+  }
+
+  ul li {
+    margin-bottom: 12px;
+  }
+
+  /* Contact form styles */
+  .contact-section {
+    background: #f8f8f1;
+    padding: 32px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgb(124 131 73 / 0.15);
+    margin-bottom: 64px;
+  }
+
+  form.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  form.contact-form label {
+    font-weight: 600;
+    color: #4a4627;
+  }
+
+  form.contact-form input,
+  form.contact-form textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1.5px solid #b6bc89;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+
+  form.contact-form input:focus,
+  form.contact-form textarea:focus {
+    outline: none;
+    border-color: #8a9a3a;
+  }
+
+  form.contact-form button {
+    background: #8a9a3a;
+    border: none;
+    color: white;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+  }
+
+  form.contact-form button:hover,
+  form.contact-form button:focus {
+    background: #a3b23c;
+  }
+
+  /* Detailed contact info styles */
+  .contact-info {
+    max-width: 900px;
+    margin: 32px auto 80px auto;
+    background: #fcfbf7;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgb(121 110 70 / 0.15);
+    color: #4b482d;
+  }
+
+  .contact-info h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 800;
+    font-size: 2.4rem;
+  }
+  
+  .contact-info p {
+    margin-bottom: 20px;
+    font-size: 1.17rem;
+    line-height: 1.7;
+  }
+
+  .contact-info strong {
+    font-weight: 700;
+  }
+
+  /* Large content paragraph sections */
+  .info-section {
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Footer */
+
+  footer {
+    background: #382f1b;
+    color: #ded7b8;
+    text-align: center;
+    padding: 40px 24px 60px 24px;
+  }
+  footer .address,
+  footer .phone {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  footer .customer-satisfaction {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #bdd17e;
+    margin-top: 20px;
+  }
+
+  /* Responsive */
+
+  @media (min-width: 768px) {
+    p, li {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main h1 {
+      font-size: 3.6rem;
+    }
+    h2.section-title {
+      font-size: 2.7rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" aria-label="Rustic Rooftop Tree Care and Ground Health Services">Rustic Rooftop</div>
+    <nav role="navigation" aria-label="Primary navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" role="main">
+  <h1>Contact Rustic Rooftop</h1>
+  
+  <section class="contact-section" aria-labelledby="contact-form-title" tabindex="0">
+    <h2 id="contact-form-title" class="section-title" style="text-align:center; margin-bottom:32px;">Get In Touch With Us</h2>
+    <form class="contact-form" aria-label="Rustic Rooftop contact form" id="contactForm">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" type="text" required maxlength="100" aria-required="true" placeholder="Your full name" />
+      
+      <label for="email">Email Address</label>
+      <input id="email" name="email" type="email" required aria-required="true" placeholder="you@example.com" />
+      
+      <label for="phone">Phone Number</label>
+      <input id="phone" name="phone" type="tel" pattern="[\d\s\+\-\(\)]+"
+        placeholder="+1 (555) 123-4567" aria-describedby="phoneHelp" />
+      <small id="phoneHelp">Optional</small>
+      
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" maxlength="150" placeholder="Subject of your message" />
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="8" required aria-required="true" placeholder="Write your message here..."></textarea>
+      
+      <button type="submit" aria-label="Send your message to Rustic Rooftop">Send Message</button>
+    </form>
+  </section>
+  
+  <section class="contact-info" tabindex="0" aria-labelledby="contact-info-title">
+    <h2 id="contact-info-title">Detailed Contact Information & Support</h2>
+    
+    <div class="info-section">
+      <p>Rustic Rooftop values clear and open communication. Whether you have questions about our services, want expert advice for your trees and soil, or need to schedule an appointment, our knowledgeable support team is ready to assist you promptly.</p>
+      <p>We welcome inquiries about project consultations, service pricing, custom care plans, and ongoing maintenance contracts. Your feedback is also important to us as we strive for continuous improvement in customer satisfaction.</p>
+    </div>
+    
+    <div class="info-section">
+      <p><strong>Customer Support:</strong> Our customer support representatives are available Monday through Friday, from 9 AM to 6 PM Eastern Time. Calls and emails received after hours are returned first thing the next business day.</p>
+    </div>
+    
+    <div class="info-section">
+      <p><strong>Emergency Tree Care:</strong> For urgent tree care needs such as storm damage or hazardous trees, please call us immediately at our dedicated emergency line listed below. Our emergency response team operates 24/7 during critical situations.</p>
+    </div>
+
+    <div class="info-section">
+      <p><strong>Service Areas:</strong> Rustic Rooftop proudly serves New York City and surrounding metropolitan areas, offering tree care, pruning, soil health management, and landscaping renovation to both residential and commercial customers.</p>
+      <p>If you are outside our service area, please contact us for referrals to trusted partners in your region.</p>
+    </div>
+
+    <div class="info-section">
+      <p><strong>Visiting Us:</strong> You are welcome to visit our office or nursery by appointment. Please schedule in advance to ensure a dedicated consultation with one of our arborists or specialists.</p>
+    </div>
+
+    <div class="info-section">
+      <p><strong>Frequently Asked Questions:</strong> Before reaching out, you may find answers to common questions helpful on our FAQ page, including details on tree pruning schedules, soil conditioning processes, and service availability.</p>
+    </div>
+
+    <div class="info-section">
+      <p><strong>Mailing Address:</strong><br/>
+        Rustic Rooftop<br/>
+        60 Washington Square S,<br/>
+        New York, NY 10012, USA</p>
+    </div>
+
+    <div class="info-section">
+      <p><strong>Phone Number:</strong> (212) 555-1234</p>
+    </div>
+    
+    <div class="info-section">
+      <p><strong>Email:</strong> <a href="mailto:info@rusticrooftop.com">info@rusticrooftop.com</a></p>
+    </div>
+  </section>
+  
+  <section class="contact-info" tabindex="0" aria-labelledby="why-contact-title">
+    <h2 id="why-contact-title" class="section-title" style="text-align:center; margin-top:64px;">Why Contact Rustic Rooftop?</h2>
+    <p>Our reputation for expertise, reliability, and exceptional customer service makes reaching out to Rustic Rooftop the first choice for tree and ground health care across New York City.</p>
+    <p>The quality of your landscape’s health depends on proactive, knowledgeable care. By contacting us, you benefit from:</p>
+    <ul>
+      <li>Personalized service plans tailored to your trees and soil</li>
+      <li>Access to certified industry experts committed to excellence</li>
+      <li>Innovative techniques with an eco-friendly focus</li>
+      <li>Transparent pricing and thorough consultation</li>
+      <li>Emergency response for urgent tree care needs</li>
+      <li>Ongoing support and maintenance options for long-term health</li>
+    </ul>
+    <p>Whether you’re a homeowner, property manager, or city planner, our team is here to provide expert guidance and dependable service that enhance your green spaces and protect your investment.</p>
+    <p>We encourage new and existing clients to connect with us anytime to discuss your unique needs and goals. Together, we cultivate healthier, stronger environments that flourish for years to come.</p>
+  </section>
+
+  <section class="contact-info" tabindex="0" aria-labelledby="more-info-title">
+    <h2 id="more-info-title" class="section-title" style="text-align:center; margin-top:64px;">Additional Information</h2>
+    <p>Rustic Rooftop is dedicated to maintaining the highest standards in environmental responsibility and client care. We invite you to inquire about:</p>
+    <ul>
+      <li>Seasonal tree care recommendations for your specific region</li>
+      <li>Customized soil health testing and treatment options</li>
+      <li>Landscape renovation and sustainable planting advice</li>
+      <li>Educational workshops and community outreach programs</li>
+      <li>Career and internship opportunities with our expert teams</li>
+    </ul>
+    <p>You can also request on-site assessments and personalized consultations either virtually or in-person with our certified arborists and soil scientists.</p>
+    <p>Our commitment extends beyond service delivery to building lasting partnerships with clients through education, transparency, and continual innovation.</p>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address class="address" aria-label="Company Address">
+      60 Washington Square S, New York, NY 10012, USA
+    </address>
+    <div class="phone" aria-label="Company phone number">
+      Phone: (212) 555-1234
+    </div>
+    <div class="customer-satisfaction" aria-label="Customer satisfaction message">
+      Increasing Customer Satisfaction Through Quality, Care, and Commitment to Your Trees and Soil Health
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Contact form submission handler (client-side demo)
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Thank you for contacting Rustic Rooftop. We will get back to you shortly.');
+    form.reset();
+  });
+</script>
+</body>
+</html>
+
